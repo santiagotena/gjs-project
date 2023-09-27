@@ -1,0 +1,31 @@
+For company employees (via UI):
+    viewing the list, adding, editing and deleting trucks, drivers;
+    reviewing the list and adding new orders, checking that:
+        all loaded cargos must be unloaded somewhere;
+        all unloaded goods must be loaded somewhere;
+    view the status of orders and cargos;
+    displaying a list of trucks that are suitable for order delivery if:
+        the truck is in good condition;
+        the truck is suitable in terms of capacity (taking into account the loading / unloading of goods in the cities along the route);
+        the truck is not fulfilling any orders at the moment;
+    selection and assignment of drivers based on the size of the work shift used by the truck and the estimated travel time (calculated from the map of cities and waypoints):
+        the time limit per month (176 hours) for each of the drivers in the shift will not be exceeded during the execution of this order (also take into account the change of months during the order);
+        the driver is not currently fulfilling other orders;
+        at the time of appointment, the driver is located in the same city as the truck.
+For drivers (via UI):
+    display the following information:
+        driver's personal number
+        personal numbers of co-driver(s)
+        truck number
+        order number
+        list of waypoints
+    change the actual working time and order status:
+        the driver entered/finished the shift
+        driver changed status:
+            Behind the wheel
+            Second driver
+            Loading and unloading work
+            Rest
+        the driver received/unloaded the cargo (change order status)
+            Uploaded
+            Unloaded

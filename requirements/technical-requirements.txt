@@ -1,0 +1,18 @@
+Technical requirements
+    As a result, it is required to obtain a multi-user client-server application with a network connection.
+    All data is stored on the server side. Each client can upload some data, after each change operation the data must be synchronized with the server.
+    The client must have a graphical interface.
+    The application must handle hardware and software errors.
+
+Criteria for successful completion of the task
+    1. Functionality works (UI required)
+    2. Maven-based project divided into modules (build with one command, deploy with one command)
+    3. Domain interfaces are described
+    4. Connected MySQL database
+    5. Entities of the subject area are created; mapping to tables in the database
+    6. Working with entities through DAO
+    7. Application deployed on AS
+    8. Implemented exception handling
+    9. Logging enabled
+    10. Availability of technical solution description
+    11. Availability of unit tests for business logic

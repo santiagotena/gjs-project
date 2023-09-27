@@ -1,0 +1,31 @@
+There are the following types of entities:
+    Truck
+        Number (4 digits (from 0000 to 9999) + 3 letters)
+        Capacity (tons)
+        Status (OK, NOK)
+        Current city
+    Driver
+        Name
+        Surname
+        Personal number
+        Working hours in the current month
+        Status (rest, driving)
+        Current city
+        Current truck
+    Order
+        Unique number
+        Completed (yes/no)
+        Waypoint list
+            City
+            Cargo
+            Type (loading/unloading)
+        Truck to complete order
+        List of the drivers to complete the order
+    Cargo
+        Unique number
+        Name
+        Weight (Kg)
+        Status (ready, shipped, delivered)
+    Country map
+        Cities
+        Distances
