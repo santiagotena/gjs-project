@@ -1,0 +1,30 @@
+Database
+    [] Create MySQL tables
+        [] Truck
+        [] Driver
+        [] Order
+        [] Cargo
+        [] Country Map
+    [] Create Entities via Spring
+    [] Designate identifiers and sequences
+    [] Add restrictions
+        [] Truck number is unique and complies with regex
+
+Backend
+    [] Business logic
+    [] Handle API Requests
+
+Frontend
+    [] Setup React application
+    [] Create router
+    [] Handle log-in system
+
+Testing
+    []
+
+Functionality
+    [] Employee
+    [] Driver
+
+Misc
+    []
