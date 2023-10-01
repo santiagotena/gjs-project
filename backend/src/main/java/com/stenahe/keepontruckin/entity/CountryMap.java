@@ -22,7 +22,7 @@ public class CountryMap {
             strategy = GenerationType.SEQUENCE,
             generator = "cityPairSequence"
     )
-    private String cityPairId;
+    private Long cityPairId;
     private String sourceCity;
     private String destinationCity;
     private double distanceKm;
