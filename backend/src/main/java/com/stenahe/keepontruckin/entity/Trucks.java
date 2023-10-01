@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Truck {
+public class Trucks {
     @Id
     private Long truckId;
     private double capacity;

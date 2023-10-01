@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Driver {
+public class Drivers {
     @Id
     @SequenceGenerator(
             name = "driverSequence",
