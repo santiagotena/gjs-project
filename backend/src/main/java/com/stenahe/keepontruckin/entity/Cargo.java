@@ -11,22 +11,19 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Drivers {
+public class Cargo {
     @Id
     @SequenceGenerator(
-            name = "driverSequence",
-            sequenceName = "driverSequence",
+            name = "cargoSequence",
+            sequenceName = "cargoSequence",
             allocationSize = 1
     )
     @GeneratedValue(
             strategy = GenerationType.SEQUENCE,
-            generator = "driverSequence"
+            generator = "cargoSequence"
     )
-    private Long driverId;
-    private String firstName;
-    private String lastName;
-    private double monthlyHours;
-    private String status;
-    private String currentCity;
-    private String currentTruck;
+    private Long cargoId;
+    private String name;
+    private double weightKg;
+    private String status; //ready shipped delivered
 }

@@ -13,6 +13,20 @@ import lombok.NoArgsConstructor;
 @Builder
 public class CountryMap {
     @Id
-    private String name;
-//    private Double distances;
+    @SequenceGenerator(
+            name = "cityPairSequence",
+            sequenceName = "cityPairSequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "cityPairSequence"
+    )
+    private String cityPairId;
+    private String sourceCity;
+    private String destinationCity;
+    private double distanceKm;
+
+
+
 }

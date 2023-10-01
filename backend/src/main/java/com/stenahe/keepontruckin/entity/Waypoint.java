@@ -11,20 +11,19 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Orders {
+public class Waypoint {
     @Id
     @SequenceGenerator(
-            name = "orderSequence",
-            sequenceName = "orderSequence",
+            name = "waypointSequence",
+            sequenceName = "waypointSequence",
             allocationSize = 1
     )
     @GeneratedValue(
             strategy = GenerationType.SEQUENCE,
-            generator = "orderSequence"
+            generator = "waypointSequence"
     )
-    private Long uniqueNumber;
-    private boolean isOrderCompleted;
-    //Waypoint List
-    private Long assignedTruckId;
-    //Drivers List
+    private Long waypointId;
+    private String destinationCity;
+    private String cargoId;
+    private String type; //loading unloading
 }

@@ -12,10 +12,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Trucks {
+public class Truck {
     @Id
-    private Long truckId;
-    private double capacity;
-    private String status;
+    private Long truckId; // 4 digits (from 0000 to 9999) + 3 letters
+    private double capacityTonnes;
+    private String status; //OK NOK
     private String currentCity;
 }
