@@ -1,18 +1,18 @@
 Database
-    [] Create MySQL tables
-        [] Truck
-        [] Driver
-        [] Order
-        [] Cargo
-        [] Country Map
-    [] Create Entities via Spring
-    [] Designate identifiers and sequences
-    [] Add restrictions
-        [] Truck number is unique and complies with regex
+    [x] Create MySQL tables
+        [x] Truck
+        [x] Driver
+        [x] Order
+        [x] Cargo
+        [x] Country Map
+    [x] Create Entities via Spring
+    [x] Designate identifiers and sequences
+    [x] Add restrictions
+        [x] Truck number is unique and complies with regex
 
 Backend
     [] Business logic
-    [] Handle API Requests
+    [] Implement RESTful API Requests
 
 Frontend
     [] Setup React application
