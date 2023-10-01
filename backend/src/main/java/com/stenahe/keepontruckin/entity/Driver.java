@@ -1,5 +1,6 @@
 package com.stenahe.keepontruckin.entity;
 
+import com.stenahe.keepontruckin.enums.Status;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -26,7 +27,8 @@ public class Driver {
     private String firstName;
     private String lastName;
     private double remainingMonthlyHours;
-    private String status; //rest driving
+    @Enumerated(EnumType.STRING)
+    private Status.DriverStatus driverStatus;
     private String currentCity;
     private String currentTruck;
 }

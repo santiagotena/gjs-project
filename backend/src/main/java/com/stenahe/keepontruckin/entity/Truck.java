@@ -1,7 +1,8 @@
 package com.stenahe.keepontruckin.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import com.stenahe.keepontruckin.enums.Status;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,8 +15,13 @@ import lombok.NoArgsConstructor;
 @Builder
 public class Truck {
     @Id
-    private Long truckId; // 4 digits (from 0000 to 9999) + 3 letters
+    @Pattern(
+            regexp = "^\\d{4}[a-zA-Z]{3}$",
+            message = "Name does not match 4 digits (from 0000 to 9999) + 3 letters."
+    )
+    private String truckId;
     private double capacityTonnes;
-    private String status; //OK NOK
+    @Enumerated(EnumType.STRING)
+    private Status.TruckStatus truckStatus;
     private String currentCity;
 }

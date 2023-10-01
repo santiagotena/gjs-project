@@ -30,7 +30,7 @@ public class Order {
             cascade = CascadeType.ALL
     )
     private List<Waypoint> waypoints;
-    private Long assignedTruckId;
+    private String assignedTruckId;
     @OneToMany(
             cascade = CascadeType.ALL
     )

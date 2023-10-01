@@ -1,5 +1,6 @@
 package com.stenahe.keepontruckin.entity;
 
+import com.stenahe.keepontruckin.enums.Status;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -23,7 +24,8 @@ public class Cargo {
             generator = "cargoSequence"
     )
     private Long cargoId;
-    private String name;
+    private String cargoName;
     private double weightKg;
-    private String status; //ready shipped delivered
+    @Enumerated(EnumType.STRING)
+    private Status.CargoStatus cargoStatus;
 }

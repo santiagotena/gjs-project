@@ -1,5 +1,6 @@
 package com.stenahe.keepontruckin.entity;
 
+import com.stenahe.keepontruckin.enums.Types;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -24,6 +25,7 @@ public class Waypoint {
     )
     private Long waypointId;
     private String destinationCity;
-    private String cargoId;
-    private String type; //loading unloading
+    private Long cargoId;
+    @Enumerated(EnumType.STRING)
+    private Types.ActionType actionType;
 }

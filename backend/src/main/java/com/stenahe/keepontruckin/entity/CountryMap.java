@@ -26,7 +26,4 @@ public class CountryMap {
     private String sourceCity;
     private String destinationCity;
     private double distanceKm;
-
-
-
 }
