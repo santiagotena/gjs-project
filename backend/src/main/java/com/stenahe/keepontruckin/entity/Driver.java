@@ -35,5 +35,5 @@ public class Driver {
             regexp = "^\\d{4}[a-zA-Z]{3}$",
             message = "Name does not match 4 digits (from 0000 to 9999) + 3 letters."
     )
-    private String currentTruck;
+    private String currentTruck; // OneToOne + JoinColumn
 }

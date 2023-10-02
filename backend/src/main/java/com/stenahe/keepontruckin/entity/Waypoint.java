@@ -25,7 +25,7 @@ public class Waypoint {
     )
     private Long waypointId;
     private String destinationCity;
-    private Long cargoId;
+    private Long cargoId; //OneToOne + JoinColumn
     @Enumerated(EnumType.STRING)
     private Types.ActionType actionType;
 }

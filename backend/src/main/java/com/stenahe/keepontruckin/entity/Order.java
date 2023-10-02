@@ -30,7 +30,7 @@ public class Order {
             cascade = CascadeType.ALL
     )
     private List<Waypoint> waypoints;
-    private String assignedTruckId;
+    private String assignedTruckId; //OneToOne Join Column
     @OneToMany(
             cascade = CascadeType.ALL
     )
