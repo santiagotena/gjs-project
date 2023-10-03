@@ -1,6 +1,7 @@
 package com.stenahe.keepontruckin.repository;
 
 import com.stenahe.keepontruckin.entity.Driver;
+import com.stenahe.keepontruckin.entity.Truck;
 import com.stenahe.keepontruckin.enums.Status;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,14 @@ class DriverRepositoryTest {
 
     @Test
     public void SaveDriverRepository() {
+        Truck truck =
+                Truck.builder()
+                        .truckId("1234ABC")
+                        .capacityTonnes(10)
+                        .truckStatus(Status.TruckStatus.OK)
+                        .currentCity("Wolfsburg")
+                        .build();
+
         Driver driver =
                 Driver.builder()
                         .firstName("Santiago")
@@ -24,7 +33,7 @@ class DriverRepositoryTest {
                         .remainingMonthlyHours(176)
                         .driverStatus(Status.DriverStatus.REST)
                         .currentCity("Wolfsburg")
-                        .currentTruck("1234ABC")
+                        .truck(truck)
                         .build();
         driverRepository.save(driver);
     }

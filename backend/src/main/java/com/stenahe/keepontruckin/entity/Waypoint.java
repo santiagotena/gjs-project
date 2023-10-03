@@ -25,7 +25,17 @@ public class Waypoint {
     )
     private Long waypointId;
     private String destinationCity;
-    private Long cargoId; //OneToOne + JoinColumn
+    @OneToOne(
+            cascade = CascadeType.ALL,
+            fetch = FetchType.EAGER,
+            optional = false
+
+    )
+    @JoinColumn(
+            name = "cargo_id",
+            referencedColumnName = "cargoId"
+    )
+    private Cargo cargo;
     @Enumerated(EnumType.STRING)
     private Types.ActionType actionType;
 }

@@ -30,7 +30,16 @@ public class Order {
             cascade = CascadeType.ALL
     )
     private List<Waypoint> waypoints;
-    private String assignedTruckId; //OneToOne Join Column
+    @OneToOne(
+            cascade = CascadeType.ALL,
+            fetch = FetchType.EAGER,
+            optional = false
+    )
+    @JoinColumn(
+            name = "truck_id",
+            referencedColumnName = "truckId"
+    )
+    private Truck truck;
     @OneToMany(
             cascade = CascadeType.ALL
     )

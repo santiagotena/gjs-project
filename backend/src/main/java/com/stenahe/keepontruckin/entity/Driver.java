@@ -31,9 +31,14 @@ public class Driver {
     @Enumerated(EnumType.STRING)
     private Status.DriverStatus driverStatus;
     private String currentCity;
-    @Pattern(
-            regexp = "^\\d{4}[a-zA-Z]{3}$",
-            message = "Name does not match 4 digits (from 0000 to 9999) + 3 letters."
+    @OneToOne(
+            cascade = CascadeType.ALL,
+            fetch = FetchType.EAGER,
+            optional = false
     )
-    private String currentTruck; // OneToOne + JoinColumn
+    @JoinColumn(
+            name = "truck_id",
+            referencedColumnName = "truckId"
+    )
+    private Truck truck;
 }
