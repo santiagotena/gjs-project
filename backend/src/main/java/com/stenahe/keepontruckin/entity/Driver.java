@@ -31,10 +31,10 @@ public class Driver {
     @Enumerated(EnumType.STRING)
     private Status.DriverStatus driverStatus;
     private String currentCity;
-    @OneToOne(
-            cascade = CascadeType.ALL,
-            fetch = FetchType.EAGER,
-            optional = false
+    @ManyToOne(
+            cascade = CascadeType.ALL
+//            fetch = FetchType.EAGER,
+//            optional = false
     )
     @JoinColumn(
             name = "truck_id",

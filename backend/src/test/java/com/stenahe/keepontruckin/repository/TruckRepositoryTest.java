@@ -17,13 +17,13 @@ class TruckRepositoryTest {
     private TruckRepository truckRepository;
 
     @Test
-    public void SaveTruckRepository() {
+    public void saveTruckRepository() {
         Truck truck =
                 Truck.builder()
                         .truckId("1234ABC")
                         .capacityTonnes(10)
                         .truckStatus(Status.TruckStatus.OK)
-                        .currentCity("Wolfsburg")
+                        .currentCity("Granada")
                         .build();
         truckRepository.save(truck);
     }

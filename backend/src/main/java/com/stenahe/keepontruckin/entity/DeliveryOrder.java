@@ -13,18 +13,18 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Order {
+public class DeliveryOrder {
     @Id
     @SequenceGenerator(
-            name = "orderSequence",
-            sequenceName = "orderSequence",
+            name = "deliveryOrderSequence",
+            sequenceName = "deliveryOrderSequence",
             allocationSize = 1
     )
     @GeneratedValue(
             strategy = GenerationType.SEQUENCE,
-            generator = "orderSequence"
+            generator = "deliveryOrderSequence"
     )
-    private Long cargoId;
+    private Long orderId;
     private boolean isOrderCompleted;
     @OneToMany(
             cascade = CascadeType.ALL

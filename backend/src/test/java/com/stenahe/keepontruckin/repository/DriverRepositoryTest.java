@@ -17,10 +17,10 @@ class DriverRepositoryTest {
     private DriverRepository driverRepository;
 
     @Test
-    public void SaveDriverRepository() {
+    public void saveDriverRepository() {
         Truck truck =
                 Truck.builder()
-                        .truckId("1234ABC")
+                        .truckId("4321ABC")
                         .capacityTonnes(10)
                         .truckStatus(Status.TruckStatus.OK)
                         .currentCity("Wolfsburg")
@@ -44,5 +44,4 @@ class DriverRepositoryTest {
                 driverRepository.findAll();
         System.out.println("drivers = " + drivers);
     }
-
 }
